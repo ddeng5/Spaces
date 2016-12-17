@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Spaces[]</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+	 </head>
+	<body>
+
+
+
+
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+		<!-- Header -->
+			<header id="header">
+
+				<!-- Logo -->
+					<h1 id="logo">Spaces[]</h1>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro">About Us</a></li>
+							<li><a href="#one">Who Are You</a></li>
+							<li><a href="#two">Spacers</a></li>
+							<li><a href="#work">Spacees</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+
+			</header>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content container 75%">
+					<header>
+						<h2>Spaces[]</h2>
+					</header>
+				</br>
+					<p>Welcome to <strong>Spaces[]</strong> an online community marketplace that <strong>connects people</strong> looking to rent their driveways with people who are looking to park.</p>
+					<footer>
+						<a href="#one" class="button style2 down"></a>
+					</footer>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>What Are We?</h2>
+					</header>
+					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
+					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+				</div>
+				<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2>Who Are You?</h2>
+					</header>
+					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
+					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+				</div>
+				<footer>
+					<a href="#four" class="button style3 down" style="margin-left:40%">Spacees</a>
+					<a href="#three" class="button style2 down">Spacers</a>
+				</footer>
+			</section>
+
+<!--Spacer-->
+<section id="three" class="main style4 secondary">
+	<div class="content container">
+		<header>
+			<h2>Spacer Information</h2>
+			<p>Put Your Driveway Out for Rent!</p>
+		</header>
+		<div class="box container 75%">
+
+		<!-- Contact Form -->
+
+
+
+					<div class="row 50%">
+						<div class="6u 12u(mobile)"><input type="text" id='hostNameInput' placeholder="Name" /></div>
+						<div class="6u 12u(mobile)"><input type="text" id='hostMessageInput' placeholder="Address" /></div>
+					</div>
+					<div class="row 50%">
+						<div class="6u 12u(mobile)"><input type="text" id='hostNumberInput' placeholder="Phone Number" /></div>
+						<div class="6u 12u(mobile)"><input type="text" id='hostPriceInput' placeholder="Price" /></div>
+					</div>
+					<div class="row 50%">
+						<div class="6u 12u(mobile)"><input type="text" id='hostDetailInput' placeholder="Details" /></div>
+					</div>
+					<div class="row">
+						<div class="12u">
+							<ul class="actions">
+								<li><input type="submit" value="Create Space!" /></li>
+							</ul>
+						</div>
+					</div>
+		</div>
+	</div>
+</section>
+		<!-- Work -->
+		<section id="four" class="main style3 secondary">
+			<div class="content container">
+				<header>
+					<h2>Input Information</h2>
+					<p>Fill out the following fields to find driveways near you!</p>
+				</header>
+				<div class="box container 75%">
+
+				<!-- Contact Form -->
+							<div class="row 50%">
+								<div class="6u 12u(mobile)"><input type="text" id="nameInput" placeholder="Name" /></div>
+								<div class="6u 12u(mobile)"><input type="text" id="messageInput" placeholder="Destination" /></div>
+							</div>
+							<div class="row 50%">
+								<div class="6u 12u(mobile)"><input type="text" id="numberInput" placeholder="Phone Number" /></div>
+								<div class="6u 12u(mobile)"><input type="text" id="carInput" placeholder="Car Model" /></div>
+							</div>
+							<div class="row 50%">
+								<div class="6u 12u(mobile)"><input type="text" id="licenseInput" placeholder="License Plate" /></div>
+							</div>
+
+						</br>
+
+						<form id="checkout" method="post" action="/checkout">
+						  <div id="payment-form"></div>
+						  <input type="submit" value="Reserve Now">
+						</form>
+
+						<script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+						<script>
+						// We generated a client token for you so you can test out this code
+						// immediately. In a production-ready integration, you will need to
+						// generate a client token on your server (see section below).
+						var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiJlNmI3ZTQ5Yjc4NzA5NWQxODViZjgzYTFiZTJkMDU5NDhkZGFkYTk0ZGYzYmYxNjhmNmQ3ZThkZmVjNTllZDQxfGNyZWF0ZWRfYXQ9MjAxNS0wOS0yMFQwMzo1MTo0NS45MzcxODMzODUrMDAwMFx1MDAyNm1lcmNoYW50X2lkPTM0OHBrOWNnZjNiZ3l3MmJcdTAwMjZwdWJsaWNfa2V5PTJuMjQ3ZHY4OWJxOXZtcHIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzLzM0OHBrOWNnZjNiZ3l3MmIvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsInRocmVlRFNlY3VyZSI6eyJsb29rdXBVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi90aHJlZV9kX3NlY3VyZS9sb29rdXAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjpmYWxzZSwibWVyY2hhbnRBY2NvdW50SWQiOiJhY21ld2lkZ2V0c2x0ZHNhbmRib3giLCJjdXJyZW5jeUlzb0NvZGUiOiJVU0QifSwiY29pbmJhc2VFbmFibGVkIjpmYWxzZSwibWVyY2hhbnRJZCI6IjM0OHBrOWNnZjNiZ3l3MmIiLCJ2ZW5tbyI6Im9mZiJ9";
+
+						braintree.setup(clientToken, "dropin", {
+						  container: "payment-form"
+						});
+						</script>
+
+				</div>
+
+		</section>
+		<!-- Maps -->
+
+<script type="text/javascript">
+//$(document).ready(function() {
+		            // execute
+
+
+						var ref = new Firebase('https://glaring-heat-9037.firebaseio.com/available4');
+								var obj = 'name';
+								ref.on('child_added', function(snapshot) {
+								    var message = snapshot.val();
+								    var obj = message.name;
+								    console.log(obj);
+								});
+
+
+	function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 43.40, lng: -79.4},
+          zoom: 8
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        geocodeAddress(geocoder, map);
+    }
+
+
+
+    function geocodeAddress (geocoder, resultsMap){
+
+        var rootref = new Firebase('https://glaring-heat-9037.firebaseio.com/');
+        rootref.on('value',function(snapshot){
+
+            snapshot.forEach(function(childsnapshot){
+
+                childsnapshot.forEach(function (snap) {
+                    var streettest = snap.val().message;
+                    console.log(streettest);
+
+         // var address = document.getElementById('address').value;
+          geocoder.geocode({'address': streettest},function(results, status){
+
+          if (status === google.maps.GeocoderStatus.OK) {
+            resultsMap.setCenter(results[0].geometry.location);
+            console.log(results[0]);
+            var marker = new google.maps.Marker(
+            {
+              position: results[0].geometry.location,
+              map: resultsMap,
+              title: 'Hello World'
+            }
+            );
+
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+                })
+
+            });
+
+        });
+    }
+
+//	});
+</script>
+		<div id="map" style="width: 98%; height:70%;"></div>
+
+
+
+		<!-- Footer -->
+			<footer id="footer">
+
+				<!-- Icons -->
+					<ul class="actions">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+
+			</footer>
+
+		<!-- Scripts -->
+			<!-- <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script> -->
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/test.js"></script>
+
+    <script>
+
+        var base = 'https://glaring-heat-9037.firebaseio.com/';
+
+
+    var rootref1 = new Firebase(base);
+
+    console.log('hello');
+
+    $('#hostDetailInput').keypress(function (e) {
+        var attach11 = $('#hostMessageInput').val(); // address
+        var myDataRef1 = rootref1.child(attach11);
+    if (e.keyCode == 13) {
+    var name = $('#hostNameInput').val();
+    var text = $('#hostMessageInput').val();
+    var number = $('#hostNumberInput').val();
+    var price = $('#hostPriceInput').val();
+    var detail = $('#hostDetailInput').val();
+    myDataRef1.push({name: name, message: text, number: number, car: price, detail:detail});
+    $('#hostDetailInput').val('');
+
+
+    }
+    });
+        myDataRef.on('child_added', function(snapshot) {
+            var message = snapshot.val();
+        });
+
+    </script>
+    <script>
+
+        var myDataRef = rootref1.child('available2');
+
+        $('#licenseInput').keypress(function (e) {
+            if (e.keyCode == 13) {
+                var name = $('#nameInput').val();
+                var text = $('#messageInput').val();
+                var number = $('#numberInput').val();
+                var car = $('#carInput').val();
+                var license = $('#licenseInput').val();
+                myDataRef.push({name: name, message: text, number: number, car: car, license:license});
+                $('#messageInput').val('');
+                $('#nameInput').val('');
+                $('#numberInput').val('');
+                $('#carInput').val('');
+                $('#licenseInput').val('');
+
+
+            }
+        });
+    </script>
+
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV0o6WwMODoHQbm5laMaJEm9KAFChfMFM&callback=initMap">
+    </script>
+
+	</body>
+</html>
